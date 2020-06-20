@@ -1,0 +1,12 @@
+{% extends 'turniej_app/scheleton.html' %}
+
+{% block content %}
+
+
+    {% if user.is_authenticated %}
+<H1>To widzi uwierzytelniony</H1>
+
+    {% else %}
+<H1>To widzi anonimowy</H1>
+    {% endif %}
+{% endblock %}
