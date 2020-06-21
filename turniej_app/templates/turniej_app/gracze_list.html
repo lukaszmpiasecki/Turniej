@@ -1,0 +1,28 @@
+{% extends 'turniej_app/scheleton.html' %}
+
+{% block content %}
+    <h3 class="display-4">Gracze</h3>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>id</th>
+                <th>Nazwa</th>
+                <th>Gra w turnieju</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pos in object_list %}
+                <tr>
+                    <td>{{pos.id}}</td>
+                    <td>{{pos.nazwa}}</td>
+                    <td>{{pos.turniej}}</td>
+                    <td><a href="{%url 'update_gracz' pos.id%}">Zmień</a>
+                    <td><a href="{%url 'delete_gracz' pos.id%}" >Usuń</a>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

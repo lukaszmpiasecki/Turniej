@@ -1,0 +1,12 @@
+{% extends 'turniej_app/scheleton.html' %}
+
+{% block content %}
+
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="btn btn-info">Save</button>
+</form>
+
+{% endblock %}

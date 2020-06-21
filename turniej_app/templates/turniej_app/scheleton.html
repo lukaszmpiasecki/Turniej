@@ -19,7 +19,7 @@
             {% include "turniej_app/header.html" %}
         </header>
 
-        {% for message in messages %}
+       {% for message in messages %}
             {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
                 <div class="alert alert-info" role="alert">
                     {{ message }}
