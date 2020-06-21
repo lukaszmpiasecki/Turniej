@@ -19,4 +19,5 @@ path('lista_turniejow', ListaTurniejowView.as_view(), name='lista_turniejow'),
 path('index/create_turniej', CreateTurniejeView.as_view(), name='create_turniej'),
 path('lista_turniejow/<int:pk>/update_turniej', UpdateTurniejeView.as_view(), name='update_turniej'),
 path('lista_turniejow/<int:pk>/delete_turniej', DeleteTurniejeView.as_view(), name='delete_turniej'),
+path('register', RegistrationView.as_view(), name='registration')
 ]
